@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer 2</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+        
+<div class="light hide">
+    
+    <main>
+        <button class="sun"><img src="./assets/dark buttons/sun.svg" alt="sun"></button>
+            
+        <div id="timer">
+                
+            <div>
+                <span class="minutes">25</span>
+                <span>:</span>
+                <span class="seconds">00</span>
+            </div>
+                
+            <div class="controls">
+                <button class="play"><img src="./assets/light buttons/play.svg" alt="play"></button>
+                <button class="play-active hide"><img src="./assets/light buttons/play active.svg" alt="play-active"></button>
+                    
+                <button class="stop"><img src="./assets/light buttons/stop.svg" alt="stop"></button>
+                <button class="stop-active hide"><img src="./assets/light buttons/stop active.svg" alt="stop-active"></button>
+                    
+                <button class="plus"><img src="./assets/light buttons/plus.svg" alt="plus"></button>
+                <button class="plus-active hide"><img src="./assets/light buttons/plus active.svg" alt="plus-active"></button>
+                    
+                <button class="less"><img src="./assets/light buttons/less.svg" alt="less"></button>
+                <button class="less-active hide"><img src="./assets/light buttons/less active.svg" alt="less-active"></button>
+            </div>
+            
+        </div>
+        
+        <div id="musics">
+            <div class="button-and-volume">
+                <button class="tree inside"><img src="./assets/light buttons/tree.svg" alt="tree"></button>
+                <input type="range" name="volume" id="sliderTree" class="slider input">
+                
+            </div>
+            
+            <div class="button-and-volume"> 
+                <button class="cloud inside"><img src="./assets/light buttons/cloud.svg" alt="cloud"></button>
+                <input type="range" name="volume" id="sliderCloud" class="slider input">
+
+            </div>
+
+            <div class="button-and-volume"> 
+                <button class="house inside"><img src="./assets/light buttons/house.svg" alt="house"></button>
+                <input type="range" name="volume" id="sliderHouse" class="slider input">
+            </div>
+
+            <div class="button-and-volume">
+                <button class="fire inside"><img src="./assets/light buttons/fire.svg" alt="fire"></button>
+                <input type="range" name="volume" id="sliderFire" class="slider input">
+            </div>
+        </div>
+    </main>
+</div>
+
+<div class="dark ">    
+    <main>
+        <button class="moon"><img  src="./assets/dark buttons/moon.svg" alt="moon"></button>
+
+        <div id="timer">
+
+            <div>
+                <span class="minutes">25</span>
+                <span>:</span>
+                <span class="seconds">00</span>
+            </div>
+
+            <div class="controls">
+        
+                <button class="play-dark"><img src="./assets/dark buttons/darkplay.svg" alt="play-dark"></button>
+                <button class="play-dark-active hide"><img src="./assets/dark buttons/play dark active.svg" alt="play-dark-active"></button>
+
+                <button class="stop-dark"><img src="./assets/dark buttons/darkstop.svg" alt="stop-dark"></button>
+                <button class="stop-dark-active hide"><img src="./assets/dark buttons/stop dark active.svg" alt="stop-dark-active"></button>
+
+                <button class="plus-dark"><img src="./assets/dark buttons/darkplus.svg" alt="plus-dark"></button>
+                <button class="plus-dark-active hide"><img src="./assets/dark buttons/plus dark active.svg" alt="plus-dark-active"></button>
+
+                <button class="less-dark"><img src="./assets/dark buttons/darkless.svg" alt="less-dark"></button>
+                <button class="less-dark-active hide"><img src="./assets/dark buttons/less dark active.svg" alt="less-dark-active"></button>
+            </div>
+
+        </div>
+            
+        <div id="musics">
+            <div class="button-and-volume">
+                <button class="tree-dark inside"><img src="./assets/dark buttons/darkTree.svg" alt="tree"> </button>
+                <button class="tree-dark-active hide"><img src="./assets/dark buttons/darkTreeActive.svg" alt="tree-active"></button>
+                <input  type="range" name="volume" id="slider" class="slider-dark input">
+            </div>
+            
+            <div class="button-and-volume">
+                <button class="cloud-dark inside"><img src="./assets/dark buttons/darkCloud.svg" alt="cloud"> </button>
+                <button class="cloud-dark-active hide"><img src="./assets/dark buttons/darkCloudActive.svg" alt="cloud-active"></button>
+                <input  type="range" name="volume" id="slider" class="slider-dark input">
+            </div>
+
+            <div class="button-and-volume"> 
+                <button class="house-dark inside"><img src="./assets/dark buttons/darkHouse.svg" alt="house"></button>
+                <button class="house-dark-active hide"><img src="./assets/dark buttons/darkHouseActive.svg" alt="house-active"></button>
+                <input  type="range" name="volume" id="slider" class="slider-dark input">
+            </div>
+
+            <div class="button-and-volume">
+                <button class="fire-dark inside"><img src="./assets/dark buttons/darkFire.svg" alt="fire"></button>
+                <button class="fire-dark-active hide"><img src="./assets/dark buttons/darkFireActive.svg" alt="fire-active"></button>
+                <input  type="range" name="volume" id="slider" class="slider-dark input">
+            </div>
+        </div>
+            
+
+    </main>
+
+</div>
+
+
+
+    
+    <script src="./js/main.js" type="module"></script>
+    <script src="./js/darkmode.js" type="module"></script>
+    
+</body>
+</html>
