@@ -1,64 +1,45 @@
-import { elements } from "./elements.js"
+export default function () {
+	const kitchenTimerAudio = new Audio(
+		'https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true'
+	)
+	const buttonPressAudio = new Audio(
+		'https://github.com/maykbrito/automatic-video-creator/blob/master/audios/button-press.wav?raw=true'
+	)
+	const forestAudio = new Audio('./sounds/forest.wav')
+	const coffeeAudio = new Audio('./sounds/coffee.wav')
+	const rainAudio = new Audio('./sounds/rain.wav')
+	const fireAudio = new Audio('./sounds/fire.wav')
 
-const {
-    buttonPlay,
-    buttonPlayActive,
-    buttonStop,
-    buttonStopActive,
-    buttonPlus,
-    buttonPlusActive,
-    buttonLess,
-    buttonLessActive,
-    buttonTree,
-    buttonTreeActive,
-    buttonCloud,
-    buttonCloudActive,
-    buttonHouse,
-    buttonHouseActive,
-    buttonFire,
-    buttonFireActive,
-    minutesDisplay,
-    secondsDisplay
-} = elements
+	buttonPressAudio.volume = 0.35
+	kitchenTimerAudio.volume = 0.35
 
-const sounds = {
-    audioTree: "./sounds/Floresta.wav",
-    audioCloud: "./sounds/Chuva.wav",
-    audioHouse: "./sounds/Cafeteria.wav",
-    audioFire: "./sounds/Lareira.wav"
-}
+	function pressButton(button) {
+		button.play()
+	}
 
-export default function() {
-    let currentAudio = new Audio()
-    currentAudio.loop = true
-    
-    function changeAudio(audioName) {
-        pressToStop()
-        currentAudio.src = sounds[audioName]
-        pressToPlay()
-    }
-    
-    function removeAudio() {
-        pressToStop()
-        currentAudio.src = ""
-    }
-    
-    function pressToPlay() {
-        currentAudio.play()
-    }
+	function timeEnd() {
+		pressButton(kitchenTimerAudio)
+	}
 
-    function pressToStop() {
-        currentAudio.pause()        
-    }   
+	function playAudio(sound, card) {
+		sound.loop = true
+		let isActive = card.classList.contains('active')
+		isActive === false ? sound.pause() : sound.play()
+	}
 
+	function adjustVolume(sound, volume) {
+		sound.volume = volume
+	}
 
-    return {
-       pressToPlay,
-       pressToStop,
-       currentAudio,
-       changeAudio,
-       removeAudio,
-       
-    }
-
+	return {
+		pressButton,
+		timeEnd,
+		playAudio,
+		adjustVolume,
+		forestAudio,
+		coffeeAudio,
+		rainAudio,
+		fireAudio,
+		buttonPressAudio
+	}
 }
